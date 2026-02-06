@@ -1013,14 +1013,15 @@ export default function Home() {
     setError(null)
 
     try {
-      // Call Financial Insights Coordinator to get overview
-      const insightsResult = await callAIAgent(
-        'Get my financial overview including health score, upcoming payments, subscriptions, and shared expenses',
-        AGENT_IDS.FINANCIAL_INSIGHTS
-      )
+      // For now, use mock data to avoid rate limiting
+      // In production, you can enable the agent call with proper rate limiting
+      // const insightsResult = await callAIAgent(
+      //   'Get my financial overview including health score, upcoming payments, subscriptions, and shared expenses',
+      //   AGENT_IDS.FINANCIAL_INSIGHTS
+      // )
 
-      if (insightsResult.success) {
-        // Mock data structure - in production, parse from actual agent responses
+      // if (insightsResult.success) {
+        // Mock data structure - simulating agent response
         setData({
           health: {
             score: 78,
@@ -1251,9 +1252,9 @@ export default function Home() {
             }
           ]
         })
-      } else {
-        setError(insightsResult.error || 'Failed to load dashboard data')
-      }
+      // } else {
+      //   setError(insightsResult.error || 'Failed to load dashboard data')
+      // }
     } catch (err) {
       setError('An unexpected error occurred')
     } finally {
@@ -1262,59 +1263,78 @@ export default function Home() {
   }
 
   const handlePaymentAction = async (paymentId: string, action: 'approve' | 'delay') => {
-    const result = await callAIAgent(
-      `${action} payment with ID ${paymentId}`,
-      AGENT_IDS.PAYMENT_ACTION
-    )
+    try {
+      const result = await callAIAgent(
+        `${action} payment with ID ${paymentId}`,
+        AGENT_IDS.PAYMENT_ACTION
+      )
 
-    if (result.success) {
-      // Update local state
-      setData(prev => ({
-        ...prev,
-        autopays: prev.autopays.map(ap =>
-          ap.id === paymentId
-            ? { ...ap, status: action === 'approve' ? 'approved' : 'delayed' }
-            : ap
-        )
-      }))
+      if (result.success) {
+        // Update local state
+        setData(prev => ({
+          ...prev,
+          autopays: prev.autopays.map(ap =>
+            ap.id === paymentId
+              ? { ...ap, status: action === 'approve' ? 'approved' : 'delayed' }
+              : ap
+          )
+        }))
+      } else {
+        // Show error to user
+        setError(result.error || 'Failed to update payment')
+      }
+    } catch (err) {
+      setError('Network error occurred')
     }
   }
 
   const handleSubscriptionAction = async (subscriptionId: string, action: string) => {
-    const result = await callAIAgent(
-      `${action} subscription with ID ${subscriptionId}`,
-      AGENT_IDS.SUBSCRIPTION_CONTROL
-    )
+    try {
+      const result = await callAIAgent(
+        `${action} subscription with ID ${subscriptionId}`,
+        AGENT_IDS.SUBSCRIPTION_CONTROL
+      )
 
-    if (result.success) {
-      // Update local state
-      setData(prev => ({
-        ...prev,
-        subscriptions: prev.subscriptions.map(sub =>
-          sub.id === subscriptionId
-            ? { ...sub, status: action === 'freeze' ? 'paused' : action === 'resume' ? 'active' : sub.status }
-            : sub
-        )
-      }))
+      if (result.success) {
+        // Update local state
+        setData(prev => ({
+          ...prev,
+          subscriptions: prev.subscriptions.map(sub =>
+            sub.id === subscriptionId
+              ? { ...sub, status: action === 'freeze' ? 'paused' : action === 'resume' ? 'active' : sub.status }
+              : sub
+          )
+        }))
+      } else {
+        setError(result.error || 'Failed to update subscription')
+      }
+    } catch (err) {
+      setError('Network error occurred')
     }
   }
 
   const handleExpenseSettlement = async (expenseId: string) => {
-    const result = await callAIAgent(
-      `Settle expense with ID ${expenseId}`,
-      AGENT_IDS.EXPENSE_SETTLEMENT
-    )
+    try {
+      const result = await callAIAgent(
+        `Settle expense with ID ${expenseId}`,
+        AGENT_IDS.EXPENSE_SETTLEMENT
+      )
 
-    if (result.success) {
-      setData(prev => ({
-        ...prev,
-        expenses: {
-          ...prev.expenses,
-          items: prev.expenses.items.map(e =>
-            e.id === expenseId ? { ...e, settled: true } : e
-          )
-        }
-      }))
+      if (result.success) {
+        setData(prev => ({
+          ...prev,
+          expenses: {
+            ...prev.expenses,
+            items: prev.expenses.items.map(e =>
+              e.id === expenseId ? { ...e, settled: true } : e
+            )
+          }
+        }))
+      } else {
+        setError(result.error || 'Failed to settle expense')
+      }
+    } catch (err) {
+      setError('Network error occurred')
     }
   }
 
