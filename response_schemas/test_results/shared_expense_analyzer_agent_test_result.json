@@ -1,0 +1,41 @@
+{
+  "agent_name": "Shared Expense Analyzer Agent",
+  "agent_id": "6985846e1caa4e686dd66d66",
+  "test_message": "Calculate balances for my roommate expense group",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T06:08:42.142607",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "expense_groups": [
+        {
+          "group_name": "Roommates",
+          "members": [
+            {
+              "name": "You",
+              "net_balance": 0,
+              "amount_owed_to_you": 0,
+              "amount_you_owe": 0
+            }
+          ],
+          "total_group_expenses": 0,
+          "pending_settlements": [],
+          "unpaid_balances": [],
+          "expense_categories": []
+        }
+      ],
+      "total_you_owe": 0,
+      "total_owed_to_you": 0,
+      "net_balance": 0,
+      "pending_settlements": [],
+      "recent_group_expenses": []
+    },
+    "metadata": {
+      "agent_name": "Shared Expense Analyzer Agent",
+      "timestamp": "2024-06-12T14:32:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"expense_groups\": [\n      {\n        \"group_name\": \"Roommates\",\n        \"members\": [\n          {\n            \"name\": \"You\",\n            \"net_balance\": 0,\n            \"amount_owed_to_you\": 0,\n            \"amount_you_owe\": 0\n          }\n          ],\n        \"total_group_expenses\": 0,\n        \"pending_settlements\": [],\n        \"unpaid_balances\": [],\n        \"expense_categories\": []\n      }\n    ],\n    \"total_you_owe\": 0,\n    \"total_owed_to_you\": 0,\n    \"net_balance\": 0,\n    \"pending_settlements\": [],\n    \"recent_group_expenses\": []\n  },\n  \"metadata\": {\n    \"agent_name\": \"Shared Expense Analyzer Agent\",\n    \"timestamp\": \"2024-06-12T14:32:00Z\"\n  }\n}"
+}

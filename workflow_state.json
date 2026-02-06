@@ -1,0 +1,69 @@
+{
+  "workflow_name": "Traktion Financial Management System",
+  "created_at": "2026-02-06T00:00:00.000Z",
+  "agents": {
+    "manager_agent": {
+      "agent_id": "6985849049f279d47448a5b5",
+      "name": "Financial Insights Coordinator",
+      "type": "Manager",
+      "description": "Orchestrates sub-agents to aggregate financial data from autopays, subscriptions, investments, and expenses into unified dashboard insights and proactive alerts"
+    },
+    "sub_agents": [
+      {
+        "agent_id": "6985842d2237a2c55706afd0",
+        "name": "Autopay Monitor Agent",
+        "type": "Sub-Agent",
+        "description": "Tracks upcoming autopay schedules, analyzes payment patterns, and flags unusual amounts or timing changes"
+      },
+      {
+        "agent_id": "69858442e7c5cfd5352dad47",
+        "name": "Subscription Tracker Agent",
+        "type": "Sub-Agent",
+        "description": "Monitors active subscriptions, identifies unused services, calculates monthly subscription burn, and detects price changes"
+      },
+      {
+        "agent_id": "69858456b90162af337b1e1b",
+        "name": "Investment Portfolio Agent",
+        "type": "Sub-Agent",
+        "description": "Fetches real-time portfolio values, calculates gains/losses, and summarizes investment performance across accounts"
+      },
+      {
+        "agent_id": "6985846e1caa4e686dd66d66",
+        "name": "Shared Expense Analyzer Agent",
+        "type": "Sub-Agent",
+        "description": "Aggregates group expenses, calculates individual balances, and identifies pending settlements across expense groups"
+      }
+    ],
+    "independent_agents": [
+      {
+        "agent_id": "698584af1caa4e686dd66d76",
+        "name": "Payment Action Agent",
+        "type": "Independent",
+        "description": "Processes user-approved autopay actions including approve, delay, or cancel requests and confirms execution status"
+      },
+      {
+        "agent_id": "698584c3094c8b2d4207dc8d",
+        "name": "Subscription Control Agent",
+        "type": "Independent",
+        "description": "Executes subscription management actions including freeze, cancel, or modify subscription status based on user commands"
+      },
+      {
+        "agent_id": "698584d949f279d47448a5b8",
+        "name": "Expense Settlement Agent",
+        "type": "Independent",
+        "description": "Calculates optimal settlement routes between group members and initiates payment requests or transfers for settling balances"
+      }
+    ]
+  },
+  "total_agents": 8,
+  "agent_ids": [
+    "6985849049f279d47448a5b5",
+    "6985842d2237a2c55706afd0",
+    "69858442e7c5cfd5352dad47",
+    "69858456b90162af337b1e1b",
+    "6985846e1caa4e686dd66d66",
+    "698584af1caa4e686dd66d76",
+    "698584c3094c8b2d4207dc8d",
+    "698584d949f279d47448a5b8"
+  ]
+}

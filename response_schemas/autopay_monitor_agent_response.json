@@ -1,0 +1,135 @@
+{
+  "agent_name": "Autopay Monitor Agent",
+  "agent_id": "6985842d2237a2c55706afd0",
+  "agent_purpose": "autopay_monitoring",
+  "description": "Tracks upcoming autopay schedules and flags unusual amounts or timing changes",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "upcoming_autopays": [
+        {
+          "payee": "string",
+          "scheduled_date": "string",
+          "amount": "number",
+          "usual_amount": "number",
+          "frequency": "string",
+          "risk_flag": "null"
+        }
+      ],
+      "total_upcoming_amount": "number",
+      "flagged_anomalies": [
+        {
+          "payee": "string",
+          "scheduled_date": "string",
+          "amount": "number",
+          "usual_amount": "number",
+          "deviation_percent": "number",
+          "note": "string"
+        }
+      ],
+      "payment_patterns_summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "upcoming_autopays": [
+        {
+          "payee": "RentCo Apartments",
+          "scheduled_date": "2024-06-10",
+          "amount": 1250.0,
+          "usual_amount": 1250.0,
+          "frequency": "monthly",
+          "risk_flag": null
+        },
+        {
+          "payee": "StreamFlix",
+          "scheduled_date": "2024-06-13",
+          "amount": 16.99,
+          "usual_amount": 16.99,
+          "frequency": "monthly",
+          "risk_flag": null
+        },
+        {
+          "payee": "City Utilities",
+          "scheduled_date": "2024-06-14",
+          "amount": 92.45,
+          "usual_amount": 81.5,
+          "frequency": "monthly",
+          "risk_flag": "noticeable increase"
+        }
+      ],
+      "total_upcoming_amount": 1359.44,
+      "flagged_anomalies": [
+        {
+          "payee": "City Utilities",
+          "scheduled_date": "2024-06-14",
+          "amount": 92.45,
+          "usual_amount": 81.5,
+          "deviation_percent": 13.4,
+          "note": "Payment is $10.95 (13.4%) higher than your average utility bill. Please review for possible rate increases or unusual usage."
+        }
+      ],
+      "payment_patterns_summary": "Three autopays are scheduled this week. Rent and streaming subscription amounts remain consistent with prior months. City Utilities shows a 13.4% increase over your average bill\u2014monitor for trending increases or review for accuracy."
+    },
+    "metadata": {
+      "agent_name": "Autopay Monitor Agent",
+      "timestamp": "2024-06-09T15:59:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T06:08:35.832656",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "upcoming_autopays": [
+        {
+          "payee": "RentCo Apartments",
+          "scheduled_date": "2024-06-10",
+          "amount": 1250.0,
+          "usual_amount": 1250.0,
+          "frequency": "monthly",
+          "risk_flag": null
+        },
+        {
+          "payee": "StreamFlix",
+          "scheduled_date": "2024-06-13",
+          "amount": 16.99,
+          "usual_amount": 16.99,
+          "frequency": "monthly",
+          "risk_flag": null
+        },
+        {
+          "payee": "City Utilities",
+          "scheduled_date": "2024-06-14",
+          "amount": 92.45,
+          "usual_amount": 81.5,
+          "frequency": "monthly",
+          "risk_flag": "noticeable increase"
+        }
+      ],
+      "total_upcoming_amount": 1359.44,
+      "flagged_anomalies": [
+        {
+          "payee": "City Utilities",
+          "scheduled_date": "2024-06-14",
+          "amount": 92.45,
+          "usual_amount": 81.5,
+          "deviation_percent": 13.4,
+          "note": "Payment is $10.95 (13.4%) higher than your average utility bill. Please review for possible rate increases or unusual usage."
+        }
+      ],
+      "payment_patterns_summary": "Three autopays are scheduled this week. Rent and streaming subscription amounts remain consistent with prior months. City Utilities shows a 13.4% increase over your average bill\u2014monitor for trending increases or review for accuracy."
+    },
+    "metadata": {
+      "agent_name": "Autopay Monitor Agent",
+      "timestamp": "2024-06-09T15:59:00Z"
+    }
+  },
+  "test_passed": true
+}

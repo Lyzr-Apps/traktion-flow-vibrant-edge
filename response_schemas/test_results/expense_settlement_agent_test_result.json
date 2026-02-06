@@ -1,0 +1,25 @@
+{
+  "agent_name": "Expense Settlement Agent",
+  "agent_id": "698584d949f279d47448a5b8",
+  "test_message": "Calculate settlement for roommate group expenses",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T06:08:52.744473",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "settlement_plan": [],
+      "total_transactions": 0,
+      "total_amount_settled": 0,
+      "payment_requests_sent": [],
+      "settlement_status": "initiated",
+      "instructions": "To calculate a settlement plan for your roommate group expenses, please provide the list of all group members and each person's contributions and/or how much each individual owes or is owed. Once provided, I will generate the optimal settlement plan to minimize the number of transactions."
+    },
+    "metadata": {
+      "agent_name": "Expense Settlement Agent",
+      "timestamp": "2024-06-15T11:21:36Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"settlement_plan\": [],\n    \"total_transactions\": 0,\n    \"total_amount_settled\": 0,\n    \"payment_requests_sent\": [],\n    \"settlement_status\": \"initiated\",\n    \"instructions\": \"To calculate a settlement plan for your roommate group expenses, please provide the list of all group members and each person's contributions and/or how much each individual owes or is owed. Once provided, I will generate the optimal settlement plan to minimize the number of transactions.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Expense Settlement Agent\",\n    \"timestamp\": \"2024-06-15T11:21:36Z\"\n  }\n}"
+}

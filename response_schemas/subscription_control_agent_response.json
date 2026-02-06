@@ -1,0 +1,61 @@
+{
+  "agent_name": "Subscription Control Agent",
+  "agent_id": "698584c3094c8b2d4207dc8d",
+  "agent_purpose": "subscription_control",
+  "description": "Executes subscription management actions including freeze, cancel, or modify",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "action_type": "string",
+      "subscription_id": "string",
+      "subscription_name": "string",
+      "execution_status": "string",
+      "effective_date": "string",
+      "savings_amount": "number",
+      "refund_details": "string",
+      "message": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "action_type": "freeze",
+      "subscription_id": "spotify_premium",
+      "subscription_name": "Spotify Premium",
+      "execution_status": "completed",
+      "effective_date": "2024-06-07",
+      "savings_amount": 9.99,
+      "refund_details": "Your Spotify Premium subscription has been frozen. No further charges will be made during the freeze period. If your billing cycle was prepaid, your account will be credited with the unused time.",
+      "message": "Your Spotify Premium subscription is now frozen. You will retain access for the remainder of your current billing cycle, after which your subscription will be inactive until you decide to reactivate. Savings this month: $9.99. To reactivate, simply let us know at any time."
+    },
+    "metadata": {
+      "agent_name": "Subscription Control Agent",
+      "timestamp": "2024-06-07T17:13:38Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T06:08:50.589559",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "action_type": "freeze",
+      "subscription_id": "spotify_premium",
+      "subscription_name": "Spotify Premium",
+      "execution_status": "completed",
+      "effective_date": "2024-06-07",
+      "savings_amount": 9.99,
+      "refund_details": "Your Spotify Premium subscription has been frozen. No further charges will be made during the freeze period. If your billing cycle was prepaid, your account will be credited with the unused time.",
+      "message": "Your Spotify Premium subscription is now frozen. You will retain access for the remainder of your current billing cycle, after which your subscription will be inactive until you decide to reactivate. Savings this month: $9.99. To reactivate, simply let us know at any time."
+    },
+    "metadata": {
+      "agent_name": "Subscription Control Agent",
+      "timestamp": "2024-06-07T17:13:38Z"
+    }
+  },
+  "test_passed": true
+}

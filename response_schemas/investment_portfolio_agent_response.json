@@ -1,0 +1,64 @@
+{
+  "agent_name": "Investment Portfolio Agent",
+  "agent_id": "69858456b90162af337b1e1b",
+  "agent_purpose": "investment_analysis",
+  "description": "Fetches real-time portfolio values and calculates investment performance",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "total_portfolio_value": "number",
+      "total_gain_loss": "number",
+      "total_gain_loss_percentage": "number",
+      "portfolio_breakdown": [
+        "any"
+      ],
+      "top_performers": [
+        "any"
+      ],
+      "bottom_performers": [
+        "any"
+      ],
+      "asset_allocation": {}
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "total_portfolio_value": 0,
+      "total_gain_loss": 0,
+      "total_gain_loss_percentage": 0,
+      "portfolio_breakdown": [],
+      "top_performers": [],
+      "bottom_performers": [],
+      "asset_allocation": {}
+    },
+    "metadata": {
+      "agent_name": "Investment Portfolio Agent",
+      "timestamp": "2024-06-14T14:46:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T06:08:39.306769",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "total_portfolio_value": 0,
+      "total_gain_loss": 0,
+      "total_gain_loss_percentage": 0,
+      "portfolio_breakdown": [],
+      "top_performers": [],
+      "bottom_performers": [],
+      "asset_allocation": {}
+    },
+    "metadata": {
+      "agent_name": "Investment Portfolio Agent",
+      "timestamp": "2024-06-14T14:46:00Z"
+    }
+  },
+  "test_passed": true
+}

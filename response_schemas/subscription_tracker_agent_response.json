@@ -1,0 +1,67 @@
+{
+  "agent_name": "Subscription Tracker Agent",
+  "agent_id": "69858442e7c5cfd5352dad47",
+  "agent_purpose": "subscription_tracking",
+  "description": "Monitors active subscriptions and identifies unused services and price changes",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "active_subscriptions": [
+        "any"
+      ],
+      "monthly_burn_rate": "number",
+      "annual_projection": "number",
+      "unused_services": [
+        "any"
+      ],
+      "price_changes_detected": [
+        "any"
+      ],
+      "optimization_recommendations": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "active_subscriptions": [],
+      "monthly_burn_rate": 0,
+      "annual_projection": 0,
+      "unused_services": [],
+      "price_changes_detected": [],
+      "optimization_recommendations": [
+        "No active subscriptions found in your account. Please connect your subscription services or provide more data to begin tracking and optimizing your subscriptions."
+      ]
+    },
+    "metadata": {
+      "agent_name": "Subscription Tracker Agent",
+      "timestamp": "2024-06-14T09:53:12Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T06:08:37.783104",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "active_subscriptions": [],
+      "monthly_burn_rate": 0,
+      "annual_projection": 0,
+      "unused_services": [],
+      "price_changes_detected": [],
+      "optimization_recommendations": [
+        "No active subscriptions found in your account. Please connect your subscription services or provide more data to begin tracking and optimizing your subscriptions."
+      ]
+    },
+    "metadata": {
+      "agent_name": "Subscription Tracker Agent",
+      "timestamp": "2024-06-14T09:53:12Z"
+    }
+  },
+  "test_passed": true
+}

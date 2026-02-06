@@ -1,0 +1,27 @@
+{
+  "agent_name": "Subscription Control Agent",
+  "agent_id": "698584c3094c8b2d4207dc8d",
+  "test_message": "Freeze my Spotify Premium subscription",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T06:08:50.589094",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "action_type": "freeze",
+      "subscription_id": "spotify_premium",
+      "subscription_name": "Spotify Premium",
+      "execution_status": "completed",
+      "effective_date": "2024-06-07",
+      "savings_amount": 9.99,
+      "refund_details": "Your Spotify Premium subscription has been frozen. No further charges will be made during the freeze period. If your billing cycle was prepaid, your account will be credited with the unused time.",
+      "message": "Your Spotify Premium subscription is now frozen. You will retain access for the remainder of your current billing cycle, after which your subscription will be inactive until you decide to reactivate. Savings this month: $9.99. To reactivate, simply let us know at any time."
+    },
+    "metadata": {
+      "agent_name": "Subscription Control Agent",
+      "timestamp": "2024-06-07T17:13:38Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"action_type\": \"freeze\",\n    \"subscription_id\": \"spotify_premium\",\n    \"subscription_name\": \"Spotify Premium\",\n    \"execution_status\": \"completed\",\n    \"effective_date\": \"2024-06-07\",\n    \"savings_amount\": 9.99,\n    \"refund_details\": \"Your Spotify Premium subscription has been frozen. No further charges will be made during the freeze period. If your billing cycle was prepaid, your account will be credited with the unused time.\",\n    \"message\": \"Your Spotify Premium subscription is now frozen. You will retain access for the remainder of your current billing cycle, after which your subscription will be inactive until you decide to reactivate. Savings this month: $9.99. To reactivate, simply let us know at any time.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Subscription Control Agent\",\n    \"timestamp\": \"2024-06-07T17:13:38Z\"\n  }\n}"
+}

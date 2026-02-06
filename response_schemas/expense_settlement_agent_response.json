@@ -1,0 +1,59 @@
+{
+  "agent_name": "Expense Settlement Agent",
+  "agent_id": "698584d949f279d47448a5b8",
+  "agent_purpose": "expense_settlement",
+  "description": "Calculates optimal settlement routes and initiates payment requests for group expenses",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "settlement_plan": [
+        "any"
+      ],
+      "total_transactions": "number",
+      "total_amount_settled": "number",
+      "payment_requests_sent": [
+        "any"
+      ],
+      "settlement_status": "string",
+      "instructions": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "settlement_plan": [],
+      "total_transactions": 0,
+      "total_amount_settled": 0,
+      "payment_requests_sent": [],
+      "settlement_status": "initiated",
+      "instructions": "To calculate a settlement plan for your roommate group expenses, please provide the list of all group members and each person's contributions and/or how much each individual owes or is owed. Once provided, I will generate the optimal settlement plan to minimize the number of transactions."
+    },
+    "metadata": {
+      "agent_name": "Expense Settlement Agent",
+      "timestamp": "2024-06-15T11:21:36Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T06:08:52.745100",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "settlement_plan": [],
+      "total_transactions": 0,
+      "total_amount_settled": 0,
+      "payment_requests_sent": [],
+      "settlement_status": "initiated",
+      "instructions": "To calculate a settlement plan for your roommate group expenses, please provide the list of all group members and each person's contributions and/or how much each individual owes or is owed. Once provided, I will generate the optimal settlement plan to minimize the number of transactions."
+    },
+    "metadata": {
+      "agent_name": "Expense Settlement Agent",
+      "timestamp": "2024-06-15T11:21:36Z"
+    }
+  },
+  "test_passed": true
+}

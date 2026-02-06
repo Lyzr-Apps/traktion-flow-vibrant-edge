@@ -1,0 +1,113 @@
+{
+  "agent_name": "Shared Expense Analyzer Agent",
+  "agent_id": "6985846e1caa4e686dd66d66",
+  "agent_purpose": "expense_analysis",
+  "description": "Aggregates group expenses and calculates individual balances and settlements",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "expense_groups": [
+        {
+          "group_name": "string",
+          "members": [
+            {
+              "name": "string",
+              "net_balance": "number",
+              "amount_owed_to_you": "number",
+              "amount_you_owe": "number"
+            }
+          ],
+          "total_group_expenses": "number",
+          "pending_settlements": [
+            "any"
+          ],
+          "unpaid_balances": [
+            "any"
+          ],
+          "expense_categories": [
+            "any"
+          ]
+        }
+      ],
+      "total_you_owe": "number",
+      "total_owed_to_you": "number",
+      "net_balance": "number",
+      "pending_settlements": [
+        "any"
+      ],
+      "recent_group_expenses": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "expense_groups": [
+        {
+          "group_name": "Roommates",
+          "members": [
+            {
+              "name": "You",
+              "net_balance": 0,
+              "amount_owed_to_you": 0,
+              "amount_you_owe": 0
+            }
+          ],
+          "total_group_expenses": 0,
+          "pending_settlements": [],
+          "unpaid_balances": [],
+          "expense_categories": []
+        }
+      ],
+      "total_you_owe": 0,
+      "total_owed_to_you": 0,
+      "net_balance": 0,
+      "pending_settlements": [],
+      "recent_group_expenses": []
+    },
+    "metadata": {
+      "agent_name": "Shared Expense Analyzer Agent",
+      "timestamp": "2024-06-12T14:32:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T06:08:42.143208",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "expense_groups": [
+        {
+          "group_name": "Roommates",
+          "members": [
+            {
+              "name": "You",
+              "net_balance": 0,
+              "amount_owed_to_you": 0,
+              "amount_you_owe": 0
+            }
+          ],
+          "total_group_expenses": 0,
+          "pending_settlements": [],
+          "unpaid_balances": [],
+          "expense_categories": []
+        }
+      ],
+      "total_you_owe": 0,
+      "total_owed_to_you": 0,
+      "net_balance": 0,
+      "pending_settlements": [],
+      "recent_group_expenses": []
+    },
+    "metadata": {
+      "agent_name": "Shared Expense Analyzer Agent",
+      "timestamp": "2024-06-12T14:32:00Z"
+    }
+  },
+  "test_passed": true
+}

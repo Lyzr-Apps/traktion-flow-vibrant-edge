@@ -1,0 +1,170 @@
+{
+  "nodes": [
+    {
+      "id": "main_input",
+      "type": "Input",
+      "label": "Dashboard Trigger",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "financial_insights_coordinator",
+      "type": "Agent",
+      "label": "Financial Insights Coordinator",
+      "nodeCategory": "agent",
+      "agent_id": "6985849049f279d47448a5b5"
+    },
+    {
+      "id": "autopay_monitor",
+      "type": "Agent",
+      "label": "Autopay Monitor Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6985842d2237a2c55706afd0"
+    },
+    {
+      "id": "subscription_tracker",
+      "type": "Agent",
+      "label": "Subscription Tracker Agent",
+      "nodeCategory": "agent",
+      "agent_id": "69858442e7c5cfd5352dad47"
+    },
+    {
+      "id": "investment_portfolio",
+      "type": "Agent",
+      "label": "Investment Portfolio Agent",
+      "nodeCategory": "agent",
+      "agent_id": "69858456b90162af337b1e1b"
+    },
+    {
+      "id": "shared_expense_analyzer",
+      "type": "Agent",
+      "label": "Shared Expense Analyzer Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6985846e1caa4e686dd66d66"
+    },
+    {
+      "id": "payment_action_input",
+      "type": "Input",
+      "label": "Payment Action Trigger",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "payment_action_agent",
+      "type": "Agent",
+      "label": "Payment Action Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698584af1caa4e686dd66d76"
+    },
+    {
+      "id": "subscription_control_input",
+      "type": "Input",
+      "label": "Subscription Control Trigger",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "subscription_control_agent",
+      "type": "Agent",
+      "label": "Subscription Control Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698584c3094c8b2d4207dc8d"
+    },
+    {
+      "id": "expense_settlement_input",
+      "type": "Input",
+      "label": "Expense Settlement Trigger",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "expense_settlement_agent",
+      "type": "Agent",
+      "label": "Expense Settlement Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698584d949f279d47448a5b8"
+    },
+    {
+      "id": "main_output",
+      "type": "Output",
+      "label": "Dashboard Insights",
+      "nodeCategory": "end"
+    },
+    {
+      "id": "payment_output",
+      "type": "Output",
+      "label": "Payment Confirmation",
+      "nodeCategory": "end"
+    },
+    {
+      "id": "subscription_output",
+      "type": "Output",
+      "label": "Subscription Status",
+      "nodeCategory": "end"
+    },
+    {
+      "id": "settlement_output",
+      "type": "Output",
+      "label": "Settlement Result",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "main_input",
+      "target": "financial_insights_coordinator"
+    },
+    {
+      "source": "financial_insights_coordinator",
+      "target": "autopay_monitor"
+    },
+    {
+      "source": "financial_insights_coordinator",
+      "target": "subscription_tracker"
+    },
+    {
+      "source": "financial_insights_coordinator",
+      "target": "investment_portfolio"
+    },
+    {
+      "source": "financial_insights_coordinator",
+      "target": "shared_expense_analyzer"
+    },
+    {
+      "source": "autopay_monitor",
+      "target": "main_output"
+    },
+    {
+      "source": "subscription_tracker",
+      "target": "main_output"
+    },
+    {
+      "source": "investment_portfolio",
+      "target": "main_output"
+    },
+    {
+      "source": "shared_expense_analyzer",
+      "target": "main_output"
+    },
+    {
+      "source": "payment_action_input",
+      "target": "payment_action_agent"
+    },
+    {
+      "source": "payment_action_agent",
+      "target": "payment_output"
+    },
+    {
+      "source": "subscription_control_input",
+      "target": "subscription_control_agent"
+    },
+    {
+      "source": "subscription_control_agent",
+      "target": "subscription_output"
+    },
+    {
+      "source": "expense_settlement_input",
+      "target": "expense_settlement_agent"
+    },
+    {
+      "source": "expense_settlement_agent",
+      "target": "settlement_output"
+    }
+  ]
+}

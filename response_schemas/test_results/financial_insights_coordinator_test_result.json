@@ -1,0 +1,108 @@
+{
+  "agent_name": "Financial Insights Coordinator",
+  "agent_id": "6985849049f279d47448a5b5",
+  "test_message": "Show me my complete financial overview for today",
+  "expected_purpose": "manager",
+  "timestamp": "2026-02-06T06:08:27.884813",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "financial_summary": {
+        "total_monthly_obligations": 1969.49,
+        "investment_performance": "No current investments to report.",
+        "expense_balance_status": "No outstanding balances with groups or individuals.",
+        "alerts_count": 1
+      },
+      "proactive_alerts": [
+        {
+          "type": "High-Priority Autopay Upcoming",
+          "description": "Rent payment of $1,825.00 is scheduled for tomorrow. Ensure sufficient funds are available to avoid overdraft or late fees.",
+          "urgency": "high"
+        }
+      ],
+      "insights": [
+        "Today's scheduled autopays are consistent with historical patterns. Rent payment due tomorrow is high impact.",
+        "No active subscriptions or recurring services are currently billed to your account.",
+        "You have no investment activity recorded at this time.",
+        "No shared expenses are currently active -- you neither owe nor are owed any amounts in group contexts."
+      ],
+      "recommendations": [
+        "Double-check your account balance before tomorrow's rent autopay to prevent any payment issues.",
+        "You could consider exploring investment opportunities to enhance your financial growth, since no portfolio is currently active.",
+        "Continue monitoring for new subscriptions or group expenses to maintain this efficient financial state."
+      ],
+      "sub_agent_data": {
+        "autopays": {
+          "upcoming_autopays": [
+            {
+              "merchant": "Electric Utility Co.",
+              "scheduled_date": "2024-06-10",
+              "amount": 124.5,
+              "risk_indicator": "normal"
+            },
+            {
+              "merchant": "Acme Streaming Service",
+              "scheduled_date": "2024-06-10",
+              "amount": 19.99,
+              "risk_indicator": "normal"
+            },
+            {
+              "merchant": "Rent Payment",
+              "scheduled_date": "2024-06-11",
+              "amount": 1825.0,
+              "risk_indicator": "high"
+            }
+          ],
+          "total_upcoming_amount": 1969.49,
+          "flagged_anomalies": [
+            {
+              "merchant": "Rent Payment",
+              "scheduled_date": "2024-06-11",
+              "amount": 1825.0,
+              "anomaly_type": "high_priority",
+              "explanation": "Rent is categorized as a high-priority payment due to its essential nature and high amount."
+            }
+          ],
+          "payment_patterns_summary": "Today's scheduled autopays are generally consistent with historical patterns. All amounts are within expected ranges, except for the rent payment tomorrow, which is marked as high-priority due to its significant impact on your cash flow. No anomalies in amounts or timing were detected for today's payments."
+        },
+        "subscriptions": {
+          "active_subscriptions": [],
+          "monthly_burn_rate": 0,
+          "annual_projection": 0,
+          "unused_services": [],
+          "price_changes_detected": [],
+          "optimization_recommendations": [
+            "No active subscriptions detected in your account today.",
+            "You're not spending on any recurring subscription services currently.",
+            "No expiring, unused, or wasteful subscriptions require your attention at this time.",
+            "You may consider reviewing periodically to ensure prompt action if subscriptions are added in the future."
+          ]
+        },
+        "investments": {
+          "total_portfolio_value": 0,
+          "total_gain_loss": 0,
+          "total_gain_loss_percentage": 0,
+          "portfolio_breakdown": [],
+          "top_performers": [],
+          "bottom_performers": [],
+          "asset_allocation": {}
+        },
+        "shared_expenses": {
+          "expense_groups": [],
+          "total_you_owe": 0,
+          "total_owed_to_you": 0,
+          "net_balance": 0,
+          "pending_settlements": [],
+          "recent_group_expenses": []
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "Financial Insights Coordinator",
+      "timestamp": "2024-06-10T09:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"financial_summary\": {\n      \"total_monthly_obligations\": 1969.49,\n      \"investment_performance\": \"No current investments to report.\",\n      \"expense_balance_status\": \"No outstanding balances with groups or individuals.\",\n      \"alerts_count\": 1\n    },\n    \"proactive_alerts\": [\n      {\n        \"type\": \"High-Priority Autopay Upcoming\",\n        \"description\": \"Rent payment of $1,825.00 is scheduled for tomorrow. Ensure sufficient funds are available to avoid overdraft or late fees.\",\n        \"urgency\": \"high\"\n      }\n    ],\n    \"insights\": [\n      \"Today's scheduled autopays are consistent with historical patterns. Rent payment due tomorrow is high impact.\",\n      \"No active subscriptions or recurring services are currently billed to your account.\",\n      \"You have no investment activity recorded at this time.\",\n      \"No shared expenses are currently active -- you neither owe nor are owed any amounts in group contexts.\"\n    ],\n    \"recommendations\": [\n      \"Double-check your account balance before tomorrow's rent autopay to prevent any payment issues.\",\n      \"You could consider exploring investment opportunities to enhance your financial growth, since no portfolio is currently active.\",\n      \"Continue monitoring for new subscriptions or group expenses to maintain this efficient financial state.\"\n    ],\n    \"sub_agent_data\": {\n      \"autopays\": {\n        \"upcoming_autopays\": [\n          {\"merchant\": \"Electric Utility Co.\", \"scheduled_date\": \"2024-06-10\", \"amount\": 124.50, \"risk_indicator\": \"normal\"},\n          {\"merchant\": \"Acme Streaming Service\", \"scheduled_date\": \"2024-06-10\", \"amount\": 19.99, \"risk_indicator\": \"normal\"},\n          {\"merchant\": \"Rent Payment\", \"scheduled_date\": \"2024-06-11\", \"amount\": 1825.00, \"risk_indicator\": \"high\"}\n        ],\n        \"total_upcoming_amount\": 1969.49,\n        \"flagged_anomalies\": [\n          {\n            \"merchant\": \"Rent Payment\",\n            \"scheduled_date\": \"2024-06-11\",\n            \"amount\": 1825.00,\n            \"anomaly_type\": \"high_priority\",\n            \"explanation\": \"Rent is categorized as a high-priority payment due to its essential nature and high amount.\"\n          }\n        ],\n        \"payment_patterns_summary\": \"Today's scheduled autopays are generally consistent with historical patterns. All amounts are within expected ranges, except for the rent payment tomorrow, which is marked as high-priority due to its significant impact on your cash flow. No anomalies in amounts or timing were detected for today's payments.\"\n      },\n      \"subscriptions\": {\n        \"active_subscriptions\": [],\n        \"monthly_burn_rate\": 0,\n        \"annual_projection\": 0,\n        \"unused_services\": [],\n        \"price_changes_detected\": [],\n        \"optimization_recommendations\": [\n          \"No active subscriptions detected in your account today.\",\n          \"You're not spending on any recurring subscription services currently.\",\n          \"No expiring, unused, or wasteful subscriptions require your attention at this time.\",\n          \"You may consider reviewing periodically to ensure prompt action if subscriptions are added in the future.\"\n        ]\n      },\n      \"investments\": {\n        \"total_portfolio_value\": 0,\n        \"total_gain_loss\": 0,\n        \"total_gain_loss_percentage\": 0,\n        \"portfolio_breakdown\": [],\n        \"top_performers\": [],\n        \"bottom_performers\": [],\n        \"asset_allocation\": {}\n      },\n      \"shared_expenses\": {\n        \"expense_groups\": [],\n        \"total_you_owe\": 0,\n        \"total_owed_to_you\": 0,\n        \"net_balance\": 0,\n        \"pending_settlements\": [],\n        \"recent_group_expenses\": []\n      }\n    }\n  },\n  \"metadata\": {\n    \"agent_name\": \"Financial Insights Coordinator\",\n    \"timestamp\": \"2024-06-10T09:00:00Z\"\n  }\n}"
+}

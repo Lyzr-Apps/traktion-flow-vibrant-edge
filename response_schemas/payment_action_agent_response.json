@@ -1,0 +1,55 @@
+{
+  "agent_name": "Payment Action Agent",
+  "agent_id": "698584af1caa4e686dd66d76",
+  "agent_purpose": "payment_action",
+  "description": "Processes autopay actions including approve, delay, or cancel requests",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "action_type": "string",
+      "payment_id": "string",
+      "execution_status": "string",
+      "confirmation_code": "string",
+      "new_payment_date": "string",
+      "message": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "action_type": "approve",
+      "payment_id": "netflix_20240615_1599",
+      "execution_status": "completed",
+      "confirmation_code": "APV-792415",
+      "new_payment_date": "",
+      "message": "Your Netflix autopay of $15.99 due tomorrow has been successfully approved and will be processed as scheduled."
+    },
+    "metadata": {
+      "agent_name": "Payment Action Agent",
+      "timestamp": "2024-06-14T15:23:08Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-06T06:08:47.845195",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "action_type": "approve",
+      "payment_id": "netflix_20240615_1599",
+      "execution_status": "completed",
+      "confirmation_code": "APV-792415",
+      "new_payment_date": "",
+      "message": "Your Netflix autopay of $15.99 due tomorrow has been successfully approved and will be processed as scheduled."
+    },
+    "metadata": {
+      "agent_name": "Payment Action Agent",
+      "timestamp": "2024-06-14T15:23:08Z"
+    }
+  },
+  "test_passed": true
+}

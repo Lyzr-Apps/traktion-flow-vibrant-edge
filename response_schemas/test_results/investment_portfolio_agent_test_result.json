@@ -1,0 +1,26 @@
+{
+  "agent_name": "Investment Portfolio Agent",
+  "agent_id": "69858456b90162af337b1e1b",
+  "test_message": "Show me my current portfolio performance",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-06T06:08:39.306190",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "total_portfolio_value": 0,
+      "total_gain_loss": 0,
+      "total_gain_loss_percentage": 0,
+      "portfolio_breakdown": [],
+      "top_performers": [],
+      "bottom_performers": [],
+      "asset_allocation": {}
+    },
+    "metadata": {
+      "agent_name": "Investment Portfolio Agent",
+      "timestamp": "2024-06-14T14:46:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"total_portfolio_value\": 0,\n    \"total_gain_loss\": 0,\n    \"total_gain_loss_percentage\": 0,\n    \"portfolio_breakdown\": [],\n    \"top_performers\": [],\n    \"bottom_performers\": [],\n    \"asset_allocation\": {}\n  },\n  \"metadata\": {\n    \"agent_name\": \"Investment Portfolio Agent\",\n    \"timestamp\": \"2024-06-14T14:46:00Z\"\n  }\n}"
+}
